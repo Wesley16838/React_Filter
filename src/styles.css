@@ -1,0 +1,181 @@
+@import "~normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.title{
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tag */
+.tagList{
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+.tagList li{
+display:inline-block;
+padding:.5em;
+position: relative;
+width:50%;
+}
+
+
+/* Button Style */
+.filterButton{
+  color:#fff;
+  border-radius: 4px;
+  background-color:#000;
+  border: none;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  transition: all 0.5s;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filterButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.filterButton span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.filterButton:hover span {
+  padding-right: 25px;
+}
+
+.filterButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* Card */
+.cardList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-left: 0px;
+}
+
+.card{
+  /* float: left; */
+  background-color: #fff;
+  color: #000;
+  width: 45%;
+  line-height: 2em;
+  float:left;
+  display: none;
+  border:1px solid #000;
+  margin: 1em 0;
+  padding:3%;
+}
+
+.show{
+display:show;
+}
+
+.card .Logo{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height:200px;
+}
+
+.card .courseTitle{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.card .courseAuthor{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.card .courseImage{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin:1em auto 0 auto;
+}
+
+.show{
+display: block;
+}
+
+.filter{
+display: none
+}
+
+
+@media (min-width: 576px) {
+
+  .tagList li{
+   
+    width:33%;
+    }
+ 
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .card{
+    /* float: left; */
+   
+    width: 30%;
+   
+  }
+ 
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .filterButton{
+    width: 200px;
+  }
+  .tagList li{
+   
+    width:auto;
+    }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
